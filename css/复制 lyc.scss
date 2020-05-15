@@ -1,0 +1,379 @@
+@charset "UTF-8";
+//排队情况
+.insideTop {
+    position: relative;
+    .wait-container {
+        .wait-left {
+            position: relative;
+            color: #fff;
+            width: 280px;
+            height: 280px;
+            float: left;
+            text-align: center;
+            .wait-title {
+                margin-top: 22px;
+                font-size: 18px;
+            }
+            .wait-num {
+                font-size: 36px;
+                padding-top: 68px;
+                display: block;
+            }
+            .l-light {
+                position: absolute;
+                top: 210px;
+                left: 64px;
+            }
+            .wait-time {
+                padding-top: 70px;
+                font-size: 18px;
+                .wait-time-num {
+                    font-size: 20px;
+                    color: #28d6fc;
+                }
+            }
+        }
+        .wait-right {
+            position: relative;
+            color: #fff;
+            width: 280px;
+            height: 280px;
+            float: right;
+            text-align: center;
+            .wait-title {
+                margin-top: 22px;
+                font-size: 18px;
+            }
+            .wait-num {
+                font-size: 36px;
+                padding-top: 68px;
+                display: block;
+            }
+            .r-light {
+                position: absolute;
+                top: 210px;
+                left: 64px;
+            }
+            .wait-time {
+                padding-top: 70px;
+                font-size: 18px;
+                .wait-time-num {
+                    font-size: 20px;
+                    color: #28d6fc;
+                }
+            }
+        }
+        .countAdd {
+            display: none;
+            position: absolute;
+            left: 0;
+            /* top: 0; */
+            right: 0;
+            bottom: 80px;
+            z-index: 10;
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+            &.active {
+                display: block;
+                animation: countAdd 1.2s 1 ease-in;
+            }
+        }
+        @keyframes countAdd {
+            0% {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+            40% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+        }
+        .countSub {
+            display: none;
+            position: absolute;
+            left: 0;
+            /* top: 0; */
+            right: 0;
+            bottom: 180px;
+            z-index: 10;
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+            &.active {
+                display: block;
+                animation: countSub 1.2s 1 ease-in;
+            }
+        }
+        @keyframes countSub {
+            0% {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+            40% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+        }
+    }
+}
+
+//网点情况
+.network-container {
+    display: flex;
+    width: 560px;
+    height: auto;
+    color: #fff;
+    .personnel {
+        flex: 1;
+        width: 320px;
+        height: 260px;
+        .personnel-title {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 18px;
+        }
+        .personnel-content {
+            height: 90%;
+            width: 300px;
+            margin: 0 auto;
+            bottom: 10px;
+            left: 10px;
+        }
+    }
+    .shebei {
+        flex: 1;
+        width: 240px;
+        .sb-title {
+            text-align: center;
+            font-size: 18px;
+            margin: 18px 0 14px 0;
+            ;
+        }
+        .sb-content {
+            width: 180px;
+            font-size: 16px;
+            margin: 0 auto;
+            margin-left: 60px;
+            .sb01,
+            .sb02,
+            .sb03 {
+                text-align: left;
+                margin-top: 12px;
+                span {
+                    font-size: 18px;
+                    color: #28d6fc;
+                    margin: 0 4px;
+                }
+                #sb-img01,
+                #sb-img02,
+                #sb-img03 {
+                    margin-top: 6px;
+                    img {
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//销售业绩
+.yeji-container {
+    position: relative;
+    .yeji-bg {
+        position: absolute;
+        bottom: 56px;
+        left: 234px;
+        width: 215px;
+        height: 215px;
+        //  color:#fff;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid #385F95;
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(19, 31, 51, .1);
+        overflow: hidden;
+        //  background-image:-webkit-gradient(linear,left top,left bottom,from(#6cc3fe),to(#21a1d0));
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-name: breathe;
+        -webkit-animation-duration: 2000ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+    }
+    @-webkit-keyframes breathe {
+        0% {
+            opacity: .2;
+            box-shadow: 0 1px 2px rgba(19, 31, 51, 0.1);
+        }
+        100% {
+            opacity: 1;
+            border: solid 1px #385F95;
+            box-shadow: 0 1px 30px rgba(56, 95, 149, 1);
+        }
+    }
+}
+
+//周边网点
+.pos-icon {
+    position: relative;
+    top: 104px;
+    left: 274px;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+}
+.map {
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+    margin-top: -28px;
+}
+
+#canvas-ball,
+#canvas-ball02 {
+    width: 1110px;
+    position: absolute;
+    height: auto;
+    top: -144px;
+    left: -412px;
+}
+
+.insideBottom {
+    .title {
+        position: relative;
+        z-index: 200;
+    }
+}
+
+.BMap_cpyCtrl {
+    display: none!important;
+}
+
+.BMapLabel {
+    display: none!important;
+}
+
+.dg {
+    display: none;
+}
+
+.anchorBL {
+    display: none;
+}
+
+#container {
+    top:-30px;
+    position: relative;
+    z-index: 100!important;
+    background-color: rgba(255,255,255,0)!important;
+    pointer-events: none;
+}
+
+.ec-extension-bmap {
+    //  top: -30px;
+}
+
+.ec-extension-bmap {
+    background-color: #101928!important;
+}
+
+.pb-carouselWarp {
+    margin-top: -50px;
+}
+#container div:nth-child(3){
+    display: none; background: #ffffff;
+    top: 62px!important;
+} 
+#container div:nth-child(2){
+    top: 62px!important;
+}
+
+.ec-extension-bmap{
+    z-index: 50!important;
+}
+.BMap_pop{
+    display: block!important;
+}
+
+.BMap_Marker + .BMap_Marker{
+    opacity:0;
+}
+#container span.BMap_Marker{
+    position:absolute;
+    animation-timing-function: linear;
+    animation-name:fade;
+    animation-iteration-count: infinite;
+}
+#container span.BMap_Marker:nth-child(2),#container span.BMap_Marker:nth-child(3),#container span.BMap_Marker:nth-child(4),#container span.BMap_Marker:nth-child(5){
+    opacity:0;
+}
+/*设置动画，请根据实际需要修改秒数*/
+#container span.BMap_Marker{
+animation-duration: 20s;
+}
+#container span.BMap_Marker:nth-child(1){
+animation-delay: -1s;
+}
+#container span.BMap_Marker:nth-child(2){
+animation-delay: 3s;
+}
+#container span.BMap_Marker:nth-child(3){
+animation-delay: 7s;
+}
+#container span.BMap_Marker:nth-child(4){
+animation-delay: 11s;
+}
+#container span.BMap_Marker:nth-child(5){
+animation-delay: 15s;
+}
+@keyframes fade{
+    0%{
+    opacity:0;
+    z-index:2;
+    }5%{
+    opacity:1;
+    z-index: 1;
+    }20%{
+    opacity:1;
+    z-index:1;
+    }25%{
+    opacity:0;
+    z-index:0;
+    }100%{
+    opacity:0;
+    z-index:0;
+    }
+}
+.map-pop{
+    background: url(../img/map-pop.png) no-repeat;
+    width: 240px;
+    height: 100px;
+    font-size: 16px;
+    position: absolute;
+    top: -134px;
+    left: -10px;
+    color: #fff;
+    .pop-title{
+        position: absolute;
+        color: #fff;
+        top: 35px;
+        left: 80px;
+    }
+    p{
+        font-size: 16px;
+        display: block;
+        position: absolute;
+        text-align: center;
+        color: #fff;
+        top: 65px;
+        left: 80px;
+    }
+}

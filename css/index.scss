@@ -1,0 +1,739 @@
+@charset "UTF-8";
+html,
+body {
+    width: 1920px;
+    height: 1080px;
+    background-color: #101928;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'mainfont';
+    src: url('../fonts/PINGFANG REGULAR.TTF');
+}
+
+@font-face {
+    font-family: 'mainfontBold';
+    src: url('../fonts/PINGFANG BOLD.TTF');
+}
+
+* {
+    font-family: mainfont;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .header {
+        width: 100%;
+        height: 70px;
+        background-image: url(../img/boxHead.png);
+        background-repeat: no-repeat;
+        color: #fff;
+        text-align: center;
+        .headerTitle {
+            line-height: 30px;
+            margin-top: 10px;
+            font-size: 24px;
+            font-family: mainfontBold;
+        }
+        .headerDate {
+            line-height: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-family: arial;
+        }
+    }
+    .main {
+        width: 100%;
+        height: 100%;
+        margin-top: -36px;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        .insideTop,
+        .insideMiddle,
+        .insideBottom {
+            width: 561px;
+            height: 300px;
+            background-image: url(../img/box01.png);
+            background-repeat: no-repeat;
+            &>.title {
+                color: #fff;
+                text-align: center;
+                transform: translateY(-50%);
+                font-size: 20px;
+            }
+        }
+        .sectionLeft .insideTop{
+            margin-top: -15px;
+        }
+        .sectionRight .insideTop{
+            margin-top: -15px;
+        }
+        .sectionLeft {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sectionCenter {
+            padding-top: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .insideTop {
+                width: 679px;
+                height: 350px;
+                background-image: url(../img/box02.png);
+                background-repeat: no-repeat;
+
+                .insideContent {
+                    display: flex;
+                    padding: 0 24px;
+                    color: #fff;
+                    text-align: center;
+                    justify-content: space-between;
+                    .left,
+                    .right {
+                        width: 48%;
+                        &>.title {
+                            line-height: 34px;
+                        }
+                        .column {
+                            .title {
+                                position: relative;
+                                background-color: rgba(76, 130, 243, 0.16);
+                                line-height: 44px;
+                                overflow: hidden;
+                                div {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 32%;
+                                    z-index: 2;
+                                }
+                                &:after {
+                                    position: absolute;
+                                    top: -100px;
+                                    bottom: 0;
+                                    left: -300px;
+                                    right: 0;
+                                    content: '';
+                                    background-color: rgba(67, 140, 234, 0.6);
+                                    width: 200px;
+                                    height: 200px;
+                                    //                                  animation: columnTitle 10s infinite linear;
+                                    z-index: 1;
+                                }
+                            }
+                            @keyframes columnTitle {
+                                0% {
+                                    transform: rotateZ(-45deg) translate(0, 0);
+                                }
+                                20% {
+                                    transform: rotateZ(-45deg) translate(500%, 500%);
+                                }
+                                100% {
+                                    transform: rotateZ(-45deg) translate(500%, 500%);
+                                }
+                            }
+                            .table {
+                                .tableTitle {}
+                                .tableBody {
+                                    height: 233px;
+                                    overflow: hidden;
+                                    ul {
+                                        li {
+                                            line-height: 38px;
+                                            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+                                            div {
+                                                display: inline-block;
+                                                width: 32%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .insideBottom {
+                position: relative;
+                width: 679px;
+                height: 564px;
+                background-image: url(../img/box03.png);
+                background-repeat: no-repeat;
+                .insideContent {
+                    position: relative;
+                    height: 534px;
+                    .productBox {
+                        position: relative;
+                        .productPrimary {
+                            width: 230px;
+                            height: 230px;
+                            margin: auto;
+                            text-align: center;
+                            padding: 60px 0;
+                            transform: translateY(80px);
+                            background-image: url(../img/product-cir.png);
+                            animation: productPrimary 5s infinite ease-in-out;
+                            .txt {
+                                font-size: 20px;
+                                color: #fff;
+                            }
+                            .num {
+                                font-size: 36px;
+                                color: #fff;
+                                text-shadow: 0 0 0.2em #28d6fc, -0 -0 0.2em #28d6fc;
+                            }
+                        }
+                        .productSecondary {
+                            //                          animation: productSecondary 5s infinite linear;
+                            .item {
+                                position: absolute;
+                                display: inline-block;
+                                font-size: 16px;
+                                color: #fff;
+                                animation: productSecondary 5s infinite ease-in-out;
+                                .cir {
+                                    width: 60px;
+                                    height: 60px;
+                                    text-align: center;
+                                    line-height: 60px;
+                                    border-radius: 300px;
+                                    border: 1px solid rgba(40, 214, 252, 0.25);
+                                    box-shadow: inset 0 0 6px rgba(76, 130, 243, 0.75), 0 0 14px rgba(76, 130, 243, 0.75);
+                                }
+                                .txt {
+                                    margin-top: 10px;
+                                    text-align: center;
+                                }
+                                &:nth-child(1) {
+                                    top: 140px;
+                                    left: 140px;
+                                }
+                                &:nth-child(2) {
+                                    top: 140px;
+                                    right: 140px;
+                                }
+                                &:nth-child(3) {
+                                    top: 240px;
+                                    left: 70px;
+                                }
+                                &:nth-child(4) {
+                                    top: 240px;
+                                    right: 70px;
+                                }
+                            }
+                        }
+                        @keyframes productPrimary {
+                            0% {
+                                opacity: 1;
+                                transform: translateY(80px);
+                            }
+                            45% {
+                                opacity: 0.6;
+                                transform: translateY(40px);
+                            }
+                            100% {
+                                opacity: 1;
+                                transform: translateY(80px);
+                            }
+                        }
+                        @keyframes productSecondary {
+                            0% {
+                                transform: translateY(0px);
+                            }
+                            45% {
+                                transform: translateY(-15px);
+                            }
+                            0% {
+                                transform: translateY(0px);
+                            }
+                        }
+                    }
+                    .bottom {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        .light {
+                            position: absolute;
+                            left: 50%;
+                            top: -170px;
+                            transform: translateX(-50%);
+                            width: 565px;
+                            height: 238px;
+                            background-image: url(../img/light.png);
+                            animation: light 5s infinite ease-in-out;
+                        }
+                        .cir01 {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            width: 214px;
+                            height: 214px;
+                            border-radius: 300px;
+                            border: 1px solid rgba(40, 214, 252, 0.25);
+                            box-shadow: inset 0 0 26px rgba(76, 130, 243, 0.75);
+                            transform: rotateX(68deg) translateZ(88px);
+                            animation: cir 5s infinite ease-in-out;
+                        }
+                        .cir02 {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            width: 410px;
+                            height: 410px;
+                            border-radius: 300px;
+                            border: 1px solid rgba(40, 214, 252, 0.25);
+                            box-shadow: inset 0 0 26px rgba(76, 130, 243, 0.75);
+                            transform: rotateX(68deg) translateZ(30px);
+                            animation: cir 5s infinite ease-in-out;
+                        }
+                        .cir03 {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            width: 540px;
+                            height: 540px;
+                            border-radius: 300px;
+                            border: 1px solid rgba(40, 214, 252, 0.25);
+                            //                          box-shadow: inset 0 0 26px rgba(76, 130, 243, 0.75);
+                            transform: rotateX(68deg);
+                            animation: cir 5s infinite ease-in-out;
+                            @keyframes cir {
+                                0% {
+                                    box-shadow: inset 0 0 100px rgba(76, 130, 243, 0.75);
+                                }
+                                50% {
+                                    box-shadow: inset 0 0 26px rgba(76, 130, 243, 0.75);
+                                }
+                                100% {
+                                    box-shadow: inset 0 0 100px rgba(76, 130, 243, 0.75);
+                                }
+                            }
+                            @keyframes light {
+                                0% {
+                                    opacity: 1;
+                                }
+                                50% {
+                                    opacity: 0;
+                                }
+                                100% {
+                                    opacity: 1;
+                                }
+                            }
+                            @keyframes ellipse {
+                                0% {
+                                    opacity: 0.6;
+                                }
+                                50% {
+                                    opacity: 0.4;
+                                }
+                                100% {
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+                        .ellipse {
+                            opacity: 0.6;
+                            width: 310px;
+                            height: 310px;
+                            margin: auto;
+                            border-radius: 200px;
+                            box-shadow: inset 0 0 26px #4c82f3;
+                            background-color: rgba(76, 130, 243, 1);
+                            transform: rotateX(70deg) translateZ(84px); //css3新属性
+                            animation: ellipse 5s infinite ease-in-out;
+                        }
+                        .ellipse:before {
+                            content: '';
+                            display: inline-block;
+                            width: 310px;
+                            height: 310px;
+                            position: relative;
+                            opacity: 0.6;
+                            top: 30%;
+                            box-shadow: inset 0px -20px 15px #4c82f3;
+                            left: 0.5px;
+                            border-bottom-left-radius: 200px;
+                            border-bottom-right-radius: 200px;
+                            border-top: none;
+                            border-top-left-radius: 200px;
+                            border-top-right-radius: 200px;
+                            background-color: rgba(76, 130, 243, 1);
+                        }
+                        .ellipse:after {
+                            content: '';
+                            display: inline-block;
+                            width: 310px;
+                            height: 244px;
+                            position: relative;
+                            opacity: 0.6;
+                            top: -50%;
+                            box-shadow: inset 0px -20px 15px #4c82f3;
+                            left: -0.5px;
+                            border-bottom-left-radius: 200px;
+                            border-bottom-right-radius: 200px;
+                            border-top: none;
+                            background-color: rgba(76, 130, 243, 1);
+                        }
+                    }
+                }
+            }
+        }
+        .sectionRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .insideTop {
+                .insideContent {
+                    position: relative;
+                    display: flex;
+                    .weatherLeft {
+                        position: relative;
+                        width: 220px;
+                        height: 220px;
+                        margin-left: 40px;
+                        margin-top: 8px;
+                        .rotateInfo {
+                            position: absolute;
+                            width: 220px;
+                            height: 220px;
+                            text-align: center;
+                            .txt {
+                                margin-top: 60px;
+                                font-size: 48px;
+                                color: #28d6fc;
+                            }
+                            .weather-outset {
+                                img {}
+                            }
+                        }
+                        .rotateA {
+                            position: absolute;
+                            width: 220px;
+                            height: 220px;
+                            background-image: url(../img/weather-rotate01.png);
+                            animation: rotateA 15s infinite linear;
+                        }
+                        .rotateB {
+                            position: absolute;
+                            width: 220px;
+                            height: 220px;
+                            background-image: url(../img/weather-rotate02.png);
+                            background-repeat: no-repeat;
+                            animation: rotateB 30s infinite linear;
+                        }
+                        .rotateC {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 186px;
+                            height: 186px;
+                            border: 1.6px dashed #333;
+                            border-radius: 300px;
+                        }
+                        .title {
+                            position: absolute;
+                            text-align: center;
+                            width: 220px;
+                            color: #fff;
+                            top: 226px;
+                        }
+                    }
+                    .weatherRight {
+                        margin-left: 40px;
+                        .item {
+                            display: flex;
+                            align-items: center;
+                            &:nth-child(1) {
+                                .weatherIcon {
+                                    animation: weatherIcon 20s infinite;
+                                }
+                                .weatherBg {
+                                    animation: weatherBg 20s infinite;
+                                }
+                                .right {
+                                    animation: weatherRight 20s infinite linear;
+                                    animation-delay: 1.2s;
+                                }
+                            }
+                            &:nth-child(2) {
+                                .weatherIcon {
+                                    animation: weatherIcon 20s infinite;
+                                    animation-delay: 5s;
+                                }
+                                .weatherBg {
+                                    animation: weatherBg 20s infinite;
+                                    animation-delay: 5s;
+                                }
+                                .right {
+                                    animation: weatherRight 20s infinite linear;
+                                    animation-delay: 6.2s;
+                                }
+                            }
+                            &:nth-child(3) {
+                                .weatherIcon {
+                                    animation: weatherIcon 20s infinite;
+                                    animation-delay: 10s;
+                                }
+                                .weatherBg {
+                                    animation: weatherBg 20s infinite;
+                                    animation-delay: 10s;
+                                }
+                                .right {
+                                    animation: weatherRight 20s infinite linear;
+                                    animation-delay: 11.2s;
+                                }
+                            }
+                            &:nth-child(4) {
+                                .weatherIcon {
+                                    animation: weatherIcon 20s infinite;
+                                    animation-delay: 15s;
+                                }
+                                .weatherBg {
+                                    animation: weatherBg 20s infinite;
+                                    animation-delay: 15s;
+                                }
+                                .right {
+                                    animation: weatherRight 20s infinite linear;
+                                    animation-delay: 16.2s;
+                                }
+                            }
+                            .left {
+                                width: 64px;
+                                height: 64px;
+                                img {
+                                    position: absolute;
+                                    width: 64px;
+                                    height: 64px;
+                                }
+                                @keyframes weatherIcon {
+                                    0% {
+                                        transform: rotateY(0deg);
+                                    }
+                                    6% {
+                                        transform: rotateY(360deg);
+                                    }
+                                    100% {
+                                        transform: rotateY(360deg);
+                                    }
+                                }
+                                @keyframes weatherBg {
+                                    0% {
+                                        transform: rotateY(0deg);
+                                    }
+                                    6% {
+                                        transform: rotateY(360deg);
+                                    }
+                                    100% {
+                                        transform: rotateY(360deg);
+                                    }
+                                }
+                                @keyframes weatherRight {
+                                    0% {
+                                        opacity: 1;
+                                    }
+                                    1.8% {
+                                        opacity: 0;
+                                    }
+                                    3.6% {
+                                        opacity: 1;
+                                    }
+                                    5.4% {
+                                        opacity: 0;
+                                    }
+                                    7.2% {
+                                        opacity: 1;
+                                    }
+                                    100% {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                            .right {
+                                margin-left: 10px;
+                                .txt {
+                                    color: #fff;
+                                    font-size: 14px;
+                                }
+                                .num {
+                                    font-size: 18px;
+                                    color: #28d6fc;
+                                }
+                            }
+                            &:nth-child(even) {
+                                margin-left: 70px;
+                            }
+                        }
+                    }
+                }
+                @keyframes rotateA {
+                    0% {
+                        transform: rotateZ(0deg);
+                    }
+                    100% {
+                        transform: rotateZ(360deg);
+                    }
+                }
+                @keyframes rotateB {
+                    0% {
+                        transform: rotateZ(360deg);
+                    }
+                    100% {
+                        transform: rotateZ(0deg);
+                    }
+                }
+            }
+            .insideMiddle {
+                .visitor {
+                    display: flex;
+                    color: #fff;
+                    justify-content: space-between;
+                    padding: 0 100px;
+                    margin-top: 18px;
+                    .list {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            display: block;
+                            width: 14px;
+                            height: 18px;
+                            flex: 1;
+                        }
+                        .txt {
+                            font-size: 16px;
+                            line-height: 22px;
+                            margin: 0 10px 0 6px;
+                        }
+                        .num {
+                            color: #28d6fc;
+                            font-size: 20px;
+                            font-family: arial;
+                            line-height: 22px;
+                        }
+                    }
+                }
+                .waveBall-container {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 84px;
+                    margin-top: 24px;
+                    .bubble {
+                        position: absolute;
+                        border: #28d6fc 1px solid;
+                        border-radius: 1000px;
+                        position: absolute;
+                        bottom: 0;
+                        transition: 1s ease-in;
+                        box-shadow: 0 0 5px rgba(66, 126, 222, 0.75)
+                    }
+                    .waveBall-content {
+                        position: relative;
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 100px;
+                        background: -webkit-linear-gradient(-75deg, #51d5fc, #101928, #101928);
+                        overflow: hidden;
+                    }
+                    .txt {
+                        position: absolute;
+                        top: 160px;
+                        color: #FFFFFF;
+                    }
+                    .border {
+                        position: absolute;
+                        top: 0;
+                        width: 148px;
+                        height: 148px;
+                        background-color: #101928;
+                        border-radius: 98px;
+                        margin: 0 auto;
+                        margin-top: 2px;
+                    }
+                    .math {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 9;
+                        color: #fff;
+                        font-size: 60px;
+                        font-family: arial;
+                        text-align: center;
+                        text-shadow: 0px 2px 6px #386aba;
+                        line-height: 150px;
+                    }
+                    .count {
+                        display: none;
+                        position: absolute;
+                        left: 0;
+                        /* top: 0; */
+                        right: 0;
+                        bottom: 0;
+                        z-index: 10;
+                        color: #fff;
+                        font-size: 22px;
+                        text-align: center;
+                        &.active{
+                            display: block;
+                            animation: count 1.2s 1 ease-in;
+                        }
+                    }
+                    @keyframes count {
+                        0%{
+                            opacity: 1;
+                            transform: translateY(0px);
+                        }
+                        40%{
+                            opacity: 1;
+                        }
+                        100%{
+                            opacity: 0;
+                            transform: translateY(-40px);
+                        }
+                    }
+                    .wave {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        z-index: 1;
+                    }
+                    .wave+.wave {
+                        z-index: 2;
+                    }
+                }
+                .tagging {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 80px;
+                    .txt {
+                        width: 150px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

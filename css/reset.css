@@ -1,0 +1,208 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+
+/** { color:#444;}*/
+
+
+/* html{font-size: 62.5%;} */
+
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+body {
+	font: 16px;
+	font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+object,
+code,
+em,
+span,
+var,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+a,
+img,
+header,
+footer,
+nav,
+aside,
+audio,
+datalist,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+
+/*清除内外边距*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+
+
+/*设置默认字体*/
+
+:focus {
+	outline: 0;
+}
+
+ul,
+ol,
+ul li,
+ol li {
+	list-style: none;
+}
+
+
+/*重置列表*/
+
+address,
+caption,
+cite,
+em,
+code,
+dfn,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+form label {
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+	background: none;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	outline: none;
+}
+
+textarea {
+	resize: none
+}
+
+input {
+	vertical-align: middle;
+}
+
+
+/*重置图片元素*/
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*重置表格*/
+
+.l {
+	float: left;
+}
+
+.r {
+	float: right;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+	line-height: normal !important;
+}
+
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+input::-webkit-inner-spin-button {
+	display: none;
+}
+
+input::-webkit-clear-button {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a {
+	color: #000;
+}
+
+
+/*a:hover { text-decoration:underline; }*/
+
+input {
+	_filter: chroma(color=#000000);
+}
+
+
+/*--清除浮动
+------------------------------------------------------------------------------------------*/
+
+.clear {
+	zoom: 1;
+}
+
+.clear:after,
+.clear:before {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/*------------------------------------------------------------------------------------------*/
