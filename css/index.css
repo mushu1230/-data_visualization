@@ -6,17 +6,8 @@ body {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: 'mainfont';
-  src: url("../fonts/PINGFANG REGULAR.TTF");
-}
-@font-face {
-  font-family: 'mainfontBold';
-  src: url("../fonts/PINGFANG BOLD.TTF");
-}
-* {
-  font-family: mainfont;
-}
+
+
 
 .content {
   display: flex;
@@ -36,7 +27,7 @@ body {
   line-height: 30px;
   margin-top: 10px;
   font-size: 24px;
-  font-family: mainfontBold;
+
 }
 .content .header .headerDate {
   line-height: 20px;
